@@ -18,7 +18,7 @@ Add the following dependency to your `pom.xml` file:
 ```xml
 <dependency>
     <groupId>hu.unideb.inf</groupId>
-    <artifactId>homework-project-utils</artifactId>
+    <artifactId>homework-project-utils-2025</artifactId>
     <version>1.0.0</version>
     <scope>compile</scope>
 </dependency>
