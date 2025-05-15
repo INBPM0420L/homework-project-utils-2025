@@ -1,5 +1,5 @@
-homework-project-utils
-======================
+homework-project-utils-2025
+===========================
 
 Utility classes for the Software Engineering and Technologies homework project.
 
