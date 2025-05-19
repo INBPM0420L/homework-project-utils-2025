@@ -42,7 +42,7 @@ public class TwoPhaseMoveSelector<T> {
     /**
      * {@return the current selection phase}
      */
-    public Phase getPhase() {
+    public final Phase getPhase() {
         return phase;
     }
 
@@ -59,7 +59,7 @@ public class TwoPhaseMoveSelector<T> {
     /**
      * {@return whether the move is ready to be made}
      */
-    public boolean isReadyToMove() {
+    public final boolean isReadyToMove() {
         return phase == Phase.READY_TO_MOVE;
     }
 
@@ -70,7 +70,7 @@ public class TwoPhaseMoveSelector<T> {
      *
      * @param action the action to be selected
      */
-    public void select(T action) {
+    public final void select(T action) {
         switch (phase) {
             case SELECT_FROM -> selectFrom(action);
             case SELECT_TO -> selectTo(action);
@@ -102,7 +102,7 @@ public class TwoPhaseMoveSelector<T> {
      * {@return the source selected} If the move is not yet ready to be made,
      * then an {@link IllegalStateException} is thrown.
      */
-    public T getFrom() {
+    public final T getFrom() {
         if (phase == Phase.SELECT_FROM) {
             throw new IllegalStateException();
         }
@@ -113,7 +113,7 @@ public class TwoPhaseMoveSelector<T> {
      * {@return the target selected} If the move is not yet ready to be made,
      * then an {@link IllegalStateException} is thrown.
      */
-    public T getTo() {
+    public final T getTo() {
         if (phase == Phase.SELECT_FROM || phase == Phase.SELECT_TO) {
             throw new IllegalStateException();
         }
@@ -124,7 +124,7 @@ public class TwoPhaseMoveSelector<T> {
      * {@return whether the last selection (i.e, for the source or the target,
      * respectively) was invalid}
      */
-    public boolean isInvalidSelection() {
+    public final boolean isInvalidSelection() {
         return invalidSelection;
     }
 
@@ -132,7 +132,7 @@ public class TwoPhaseMoveSelector<T> {
      * Makes the move selected. If the move is not yet ready to be made, then an
      * {@link IllegalStateException} is thrown.
      */
-    public void makeMove() {
+    public final void makeMove() {
         if (phase != Phase.READY_TO_MOVE) {
             throw new IllegalStateException();
         }
@@ -144,7 +144,7 @@ public class TwoPhaseMoveSelector<T> {
      * Resets the selection, i.e., resets both the source and the target
      * selected.
      */
-    public void reset() {
+    public final void reset() {
         from = null;
         to = null;
         setPhase(Phase.SELECT_FROM);
