@@ -50,7 +50,7 @@ public class TwoPhaseMoveSelector<T> {
      * Sets the current selection phase. The method is provided to be overridden
      * by subclasses.
      *
-     * {@param phase the current selection phase}
+     * @param phase the current selection phase
      */
     protected void setPhase(Phase phase) {
         this.phase = phase;
