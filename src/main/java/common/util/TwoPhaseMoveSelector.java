@@ -18,14 +18,13 @@ public class TwoPhaseMoveSelector<T> {
         SELECT_FROM,
         SELECT_TO,
         READY_TO_MOVE
-
     }
 
-    protected final TwoPhaseMoveState<T> state;
+    private final TwoPhaseMoveState<T> state;
     protected Phase phase;
-    protected boolean invalidSelection;
-    protected T from;
-    protected T to;
+    private boolean invalidSelection;
+    private T from;
+    private T to;
 
     /**
      * Creates a {@code TwoPhaseMoveSelector} object to determine the next move
