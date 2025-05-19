@@ -35,7 +35,7 @@ import game.State;
  * @param <S> represents the states of the game
  * @param <T> represents the moves that can be applied to the states
  */
-public abstract class BaseGame<S extends State,T> {
+public abstract class AbstractGame<S extends State,T> {
 
     protected final Console console;
     protected final S state;
@@ -49,7 +49,7 @@ public abstract class BaseGame<S extends State,T> {
      * @param parser a function that converts a line read from the console to a
      *               move
      */
-    public BaseGame(S state, Function<String, T> parser) {
+    public AbstractGame(S state, Function<String, T> parser) {
         console = ConsoleCreator.console();
         Objects.requireNonNull(state);
         Objects.requireNonNull(parser);

@@ -9,7 +9,7 @@ import java.util.function.Function;
  *
  * @param <T> represents the moves that can be applied to the states
  */
-public class Game<T> extends BaseGame<State<T>, T> {
+public class Game<T> extends AbstractGame<State<T>, T> {
 
     /**
      * Creates a {@code Game} instance to conduct a two-player game whose moves

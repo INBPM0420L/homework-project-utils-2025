@@ -10,7 +10,7 @@ import java.util.function.Function;
  *
  * @param <T> represents the moves that can be applied to the states
  */
-public class TwoPhaseMoveGame<T> extends BaseGame<TwoPhaseMoveState<T>, T> {
+public class TwoPhaseMoveGame<T> extends AbstractGame<TwoPhaseMoveState<T>, T> {
 
     private final TwoPhaseMoveSelector<T> selector;
 
