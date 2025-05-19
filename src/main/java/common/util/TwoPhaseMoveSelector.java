@@ -22,8 +22,8 @@ public class TwoPhaseMoveSelector<T> {
     }
 
     protected final TwoPhaseMoveState<T> state;
-    protected Phase phase = Phase.SELECT_FROM;
-    protected boolean invalidSelection = false;
+    protected Phase phase;
+    protected boolean invalidSelection;
     protected T from;
     protected T to;
 
@@ -35,6 +35,8 @@ public class TwoPhaseMoveSelector<T> {
      */
     public TwoPhaseMoveSelector(TwoPhaseMoveState<T> state) {
         this.state = state;
+        phase = Phase.SELECT_FROM;
+        invalidSelection = false;
     }
 
     /**
