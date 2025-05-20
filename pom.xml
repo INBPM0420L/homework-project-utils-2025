@@ -38,14 +38,6 @@
         <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>de.audioattack.io</groupId>
-            <artifactId>console</artifactId>
-            <version>1.2.2</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
     <build>
         <plugins>
             <plugin>
