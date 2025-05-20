@@ -1,11 +1,9 @@
 package game.console;
 
+import java.io.Console;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
-
-import de.audioattack.io.Console;
-import de.audioattack.io.ConsoleCreator;
 
 import game.State;
 
@@ -50,7 +48,7 @@ public abstract class AbstractGame<S extends State,T> {
      *               move
      */
     public AbstractGame(S state, Function<String, T> parser) {
-        console = ConsoleCreator.console();
+        console = System.console();
         Objects.requireNonNull(state);
         Objects.requireNonNull(parser);
         this.state = state;
